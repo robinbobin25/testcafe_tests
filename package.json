@@ -1,0 +1,21 @@
+{
+    "name": "run-testcafe-tests",
+    "version": "1.0.0",
+    "description": "A demonstrative TestCafe tests",
+    "main": "tests.js",
+    "scripts": {
+      "test": "testcafe chrome tests.js -e"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/DevExpress/testcafe.git"
+    },
+    "author": "Developer Express Inc. (https://devexpress.com)",
+    "bugs": {
+      "url": "https://github.com/DevExpress/testcafe/issues"
+    },
+    "homepage": "https://github.com/DevExpress/testcafe#readme",
+    "devDependencies": {
+      "testcafe": "*"
+    }
+  }

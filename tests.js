@@ -1,10 +1,17 @@
 import { Selector } from 'testcafe';
+// import HomePage from './home-page.js';
 
-fixture `Getting Started`
-    .page `http://devexpress.github.io/testcafe/example`;
+const HomePage = require('./page-objects/home-page.js').default;
+const page = new HomePage();
 
-test('My first test', async t => {
+fixture `Check Job search works`
+    .page `https://www.indeed.jobs/`;
+
+test('My first job search', async t => {
     await t
-        .typeText('#developer-name', 'John Smith')
-        .click('#submit-button');
-});
+        .typeText(page.jobInput, 'AQA')
+        .click(page.selectArea)
+        .click(page.selectOptions)
+        .click(page.findButton)
+        .expect(Selector(".pageTitle2").innerText).contains("Open Jobs");
+});  
